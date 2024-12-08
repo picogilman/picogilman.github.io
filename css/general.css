@@ -133,4 +133,6 @@ button > * {
 	--background: transparent !important;
 }
 
-.no-space-comma::after
+.no-space-comma::after {
+	content: ",";
+}

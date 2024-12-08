@@ -74,3 +74,7 @@ function nameClicked(name){
     }
 }
 
+function isMobile(){
+    return /Mobi|Android/i.test(navigator.userAgent); 
+    // found online at https://www.restack.io/p/vue-js-detect-mobile-answer on 12/8/24
+}

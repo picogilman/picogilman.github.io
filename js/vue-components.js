@@ -52,4 +52,47 @@ function load() {
 		props: ['paper_dir'],
 		computed: {
 			thispaper() {
-				return this.$root.PAPERS[this.pap
+				return this.$root.PAPERS[this.paper_dir]; // Access the paper dynamically based on paper_dir
+			},
+			highlightedNames(){
+				return this.$root.player.highlightedNames;
+			}
+		},
+		template: `
+			<div class="paper">
+				<a :href="thispaper.link" target="_blank" class = "textleft paperlink">
+				<span v-html="thispaper.name"></span>
+				</a>
+				<span v-html="'('+thispaper.status+')'" class = "textindented"></span>
+				<br>
+				<span class = "textindented">Joint with 
+					<span v-for="(person, index) in thispaper.collaborators" :key="index">
+						<span v-bind:class="{ 'nameHighlighted': highlightedNames.includes(person.toLowerCase()) }" @click="nameClicked(person)">
+							{{ 
+								capitalizeName(person) 
+								+ ((index < thispaper.collaborators.length - 1) ? "," : "")	
+							}}
+						</span>
+					</span>
+				</span>
+			</div>
+		`,
+		methods: {
+			capitalizeName: (x) => capitalizeName(x),
+			nameClicked: (x) => nameClicked(x),
+		}//<span v-if="index < thispaper.collaborators.length - 1">{{ ', ' }}</span>
+		//<span v-if="index < thispaper.collaborators.length - 1">, </span>
+	});
+
+	console.log("yep")
+
+	app = new Vue({
+		el: "#app",
+		data: {
+			player,
+			PAPERS
+		},
+	})
+}
+
+ 
