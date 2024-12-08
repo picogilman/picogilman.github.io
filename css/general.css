@@ -1,0 +1,136 @@
+/* Global things */
+body {
+	color: var(--color);
+	--background: #0f0f0f;
+	--color: #dfdfdf;
+	--points: #ffffff;
+	background: var(--background);
+}
+
+/* General text */
+h1, h2, h3, b, input {
+	display: inline;
+	font-family: "Computer Modern", "Inconsolata", 
+}
+
+/* These are styles for different states of components. You can make layer-specific versions with .c.locked, for example */
+.locked {
+	cursor: not-allowed;
+}
+
+/* Can meens can be clicked */
+.can {
+	cursor: pointer;
+}
+
+.can:hover {
+	transform: scale(1.15, 1.15);
+	box-shadow: 0 0 20px var(--points)
+}
+
+.link {
+	display: block;
+	font-size: 15px;
+	color: #41f5f5;
+	cursor: pointer;
+	font-family: "Computer Modern", "Lucida Console", "Courier New", monospace;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #02f2f2;
+	text-decoration: none;
+}
+
+.link:hover {
+	transform: scale(1.2, 1.2);
+	text-shadow: 5px 0 10px #02f2f2,
+              -3px 0 12px #02f2f2;
+}
+
+* {
+	transition-duration: 0.5s;
+	font-family: "Computer Modern", "Inconsolata", "Courier New", monospace;
+	margin: auto;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+*:focus {
+	outline: none;
+	/* webkit-outline: none;*/
+}
+
+html, body {
+	min-height: 100%;
+	height: 100%;
+}
+
+.textindented {
+    text-indent: 1em; /* Indent by one tab */
+}
+
+.textleft {
+	text-align: left;
+}
+
+.fullWidth {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	min-width: 100%;
+	overflow-y: auto;
+	overflow-x: auto;
+	transition-duration: 0s
+}
+
+.tooltipBox { 
+    position: relative;
+}
+
+.tooltipBox:hover.tooltip{
+    opacity: 1;
+}
+
+.forceTooltip.tooltip{
+    opacity: 1;
+}
+
+.front {
+	z-index: 30000 /* make things go to front no matter what*/
+}
+
+.overlayThing {
+	z-index: 10000;
+	pointer-events:auto;
+}
+
+button > * {
+	pointer-events:none;
+}
+
+.ghost {
+	visibility: hidden
+}
+
+.bg {
+	z-index: -9000;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: transparent;
+	top: 0
+}
+
+.bg2 {
+	z-index: -9009;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0
+}
+
+.noBackground {
+	background: transparent !important;
+	background-image: none !important;
+	--background: transparent !important;
+}
+
+.no-space-comma::after

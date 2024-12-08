@@ -1,0 +1,32 @@
+.papers {
+    display: flex;
+    flex-direction: column; /* Arrange children (papers) vertically */
+    width: 100%;
+    gap: 10px;
+    text-align: left;
+}
+
+.paper {
+    display: block; /* Ensure each paper is treated as a block element */
+    width: 100%;    /* Ensure each paper takes full width */
+}
+
+.paperlink{ 
+	font-size: 15px;
+	color: #63b1de;
+	cursor: pointer;
+	font-family: "Computer Modern", "Lucida Console", "Courier New", monospace;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #63b1de;
+	text-decoration: none;  
+    transition-duration: .2s;
+}
+
+.paperlink:hover {
+	text-shadow: 3px 0 10px #63b1de,
+              -3px 0 12px #63b1de;
+}
+
+.nameHighlighted{
+    background-color: rgb(161, 161, 53);
+}
