@@ -5,6 +5,20 @@ body {
 	--color: #dfdfdf;
 	--points: #ffffff;
 	background: var(--background);
+	overflow: hidden;
+}
+
+* {
+	transition-duration: 0.5s;
+	font-family: "Computer Modern", "Inconsolata", "Courier New", monospace;
+	margin: auto;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+*:focus {
+	outline: none;
+	/* webkit-outline: none;*/
 }
 
 /* General text */
@@ -16,16 +30,6 @@ h1, h2, h3, b, input {
 /* These are styles for different states of components. You can make layer-specific versions with .c.locked, for example */
 .locked {
 	cursor: not-allowed;
-}
-
-/* Can meens can be clicked */
-.can {
-	cursor: pointer;
-}
-
-.can:hover {
-	transform: scale(1.15, 1.15);
-	box-shadow: 0 0 20px var(--points)
 }
 
 .link {
@@ -45,26 +49,9 @@ h1, h2, h3, b, input {
               -3px 0 12px #02f2f2;
 }
 
-* {
-	transition-duration: 0.5s;
-	font-family: "Computer Modern", "Inconsolata", "Courier New", monospace;
-	margin: auto;
-	-webkit-text-size-adjust: none;
-	text-size-adjust: none;
-}
-
-*:focus {
-	outline: none;
-	/* webkit-outline: none;*/
-}
-
 html, body {
 	min-height: 100%;
 	height: 100%;
-}
-
-.textindented {
-    text-indent: 1em; /* Indent by one tab */
 }
 
 .textleft {
@@ -93,46 +80,25 @@ html, body {
     opacity: 1;
 }
 
-.front {
-	z-index: 30000 /* make things go to front no matter what*/
-}
-
-.overlayThing {
-	z-index: 10000;
-	pointer-events:auto;
-}
-
 button > * {
 	pointer-events:none;
 }
 
-.ghost {
-	visibility: hidden
+.emailbutton {
+    background-color: rgba(20, 20, 20, 0.5);
+    color: white;
+    border-radius: 5px;
+	border: 2px solid rgb(100, 20, 100, 0.5);
+    padding: 5px 20px;
+    font-size: 10px; 
+    cursor: pointer; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+	width: 350px;
+    transition: background-color .8s ease, transform .3s ease;
 }
 
-.bg {
-	z-index: -9000;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	background-color: transparent;
-	top: 0
-}
-
-.bg2 {
-	z-index: -9009;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0
-}
-
-.noBackground {
-	background: transparent !important;
-	background-image: none !important;
-	--background: transparent !important;
-}
-
-.no-space-comma::after {
-	content: ",";
+.emailbutton:hover {
+	background-color: rgba(100, 20, 100, .5);
 }

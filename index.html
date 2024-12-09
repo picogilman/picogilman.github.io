@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 
 <head>
-	<!-- <link rel="stylesheet" type="text/css" href="css/system-style.css" /> -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!-- the above was made using https://www.favicon.cc/ -->
+    <title> Pico Gilman</title>
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<!--
     <script src="js/vueFile.js"></script>
@@ -21,6 +23,15 @@
         <mainheader></mainheader>
         <span v-if='player.currentTabState == "papers"'>
             <papers></papers>
+        </span>
+        <span v-if='player.currentTabState == "main"'>
+            <maincontent></maincontent>
+        </span>
+        <span v-if='player.currentTabState == "other"'>
+            <i>Last Updated: December 9th, 2024</i>
+        </span>
+        <span v-if='false'>
+            If you are seeing this, that is because the website did not load properly, please wait a few seconds and then reload!
         </span>
     </div>
 </body>

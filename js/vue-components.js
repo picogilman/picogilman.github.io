@@ -32,9 +32,61 @@ function load() {
 		},
 	})
 
+	Vue.component('maincontent', {
+		computed: {
+			everSpelledName(){
+				return this.$root.player.everSpelledName
+			},
+			everSpelledSurname(){
+				return this.$root.player.everSpelledSurname
+			}
+		},
+		template: `
+			<div>
+				<table style="width: 100%; border-collapse: collapse;">
+					<tr>
+						<td style="width: 66%; vertical-align: top;">
+							I'm currently a second-year <a href="https://ccs.ucsb.edu/" target="_blank">CCS</a> <a href="https://ccs.ucsb.edu/majors/mathematics" target="_blank">Mathematics</a> Major at <a href="https://www.ucsb.edu/" target = "_blank">University of California: Santa Barbara</a>.
+							<br><br>
+							My primary interests are algebraic, especially algebraic number theory. I also enjoy both <i>p</i>-adic analysis and <i>L</i>-functions.
+							<br><br>
+							Some of my hobbies include playing tennis, playing bridge (recently I've been playing exclusively 2-over-1 + RCKB1430), coding, and designing idle games. 
+							Since May 2023, I've been keeping track of what I've done during ever half hour of every day.
+							<br><br>
+							I tutor mathematics - competition math and (up to intro-graduate level) analysis and algebra. Feel free to find my email below to reach out.
+						</td>
+						<td style="width: 33%; text-align: center; vertical-align: middle;"><img src="photos/headshot.jpg" alt="Pico Headshot" style="width: 50%;"></td>
+					</tr>
+				</table>
+				
+				<span style = "position: absolute; top: 80%; left: 3%" >
+					<button 
+						class = "emailbutton" 
+						v-html = "everSpelledName ? (atob('cGljb2dpbG1hbkBnbWFpbC5jb20') + ' (click to copy)') : 'Click or type out my first name to reveal personal email'"
+						onclick = "player.everSpelledName ? navigator.clipboard.writeText(atob('cGljb2dpbG1hbkBnbWFpbC5jb20')) : mobileRevealPersonalEmail()"
+						>
+					</button>
+					<button
+						class = "emailbutton" 
+						v-html = "everSpelledSurname ? (atob('cGljb2dpbG1hbkB1Y3NiLmVkdQ==') + ' (click to copy)') : 'Click or type out my last name to reveal professional email'"
+						onclick = "player.everSpelledSurname ? navigator.clipboard.writeText(atob('cGljb2dpbG1hbkB1Y3NiLmVkdQ==')) : mobileRevealProfessionalEmail()"
+						>
+					</button>
+				</span>
+			</div>
+		`, // note: I use base 64 encoding to get cGljb2dpbG1hbkBnbWFpbC5jb20 so that bots cant trivially get my email
+		methods:{
+			atob: (x) => atob(x),
+		},
+	})
+
 	Vue.component('papers', {
 		template: `
 			<div class = "papers">
+				<span>
+					<i>Click on a name to highlight all repeats, type 'clear' to</i>
+					<span onclick="player.highlightedNames = []"><i>clear</i></span>
+				</span>
 				<paper v-for="(paper, paper_dir) in PAPERS"
 					:key="paper_dir" :paper_dir="paper_dir"> 
 				</paper>
@@ -63,9 +115,9 @@ function load() {
 				<a :href="thispaper.link" target="_blank" class = "textleft paperlink">
 				<span v-html="thispaper.name"></span>
 				</a>
-				<span v-html="'('+thispaper.status+')'" class = "textindented"></span>
+				<span v-html="'('+thispaper.status+')'"></span>
 				<br>
-				<span class = "textindented">Joint with 
+				<span>Joint with 
 					<span v-for="(person, index) in thispaper.collaborators" :key="index">
 						<span v-bind:class="{ 'nameHighlighted': highlightedNames.includes(person.toLowerCase()) }" @click="nameClicked(person)">
 							{{ 
@@ -80,7 +132,8 @@ function load() {
 		methods: {
 			capitalizeName: (x) => capitalizeName(x),
 			nameClicked: (x) => nameClicked(x),
-		}//<span v-if="index < thispaper.collaborators.length - 1">{{ ', ' }}</span>
+		}
+		//<span v-if="index < thispaper.collaborators.length - 1">{{ ', ' }}</span>
 		//<span v-if="index < thispaper.collaborators.length - 1">, </span>
 	});
 
