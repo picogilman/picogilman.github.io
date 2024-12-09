@@ -5,6 +5,7 @@ var player = {
     lastLettersPressed: [],
     everSpelledName: false,
     everSpelledSurname: false,
+    everAlec: false,
 }
 
 
@@ -13,19 +14,19 @@ var PAPERS = {
         name: "ON THE DENSITY OF LOW LYING ZEROS OF A LARGE FAMILY OF AUTOMORPHIC <i>L</i>-FUNCTIONS",
         link: "https://arxiv.org/pdf/2408.09050",
         status: "submitted",
-        collaborators: ["TIMOTHY CHEEK", "KAREEM JABER", "STEVEN J. MILLER", "MARIE-HELENE TOME"]
+        collaborators: ["TIMOTHY CHEEK", "KAREEM JABER", "STEVEN J. MILLER", "MARIE-H&#233;L&#232;NE TOM&#233;"]
     },
     SMALL2024Bias: {
         name: "NUMERICAL INVESTIGATION OF LOWER ORDER BIASES IN MOMENT EXPANSIONS OF ONE PARAMETER FAMILIES OF ELLIPTIC CURVES",
         link: "https://arxiv.org/pdf/2409.18224",
         status: "on arXiv",
-        collaborators: ["TIMOTHY CHEEK", "KAREEM JABER", "STEVEN J. MILLER", "VISMAY SHARAN", "MARIE-HELENE TOME"]
+        collaborators: ["TIMOTHY CHEEK", "KAREEM JABER", "STEVEN J. MILLER", "VISMAY SHARAN", "MARIE-H&#233;L&#232;NE TOM&#233;"]
     },
     SMALL2024Erdos: {
         name: "CONGRUENCE CLASSES OF SIMPLEX STRUCTURES IN FINITE FIELD VECTOR SPACES",
         link: "https://arxiv.org/pdf/2408.07912",
         status: "submitted",
-        collaborators: ["TIMOTHY CHEEK", "JOSEPH COOPER", "ALEX IOSEVICH", "KAREEM JABER", "EYVINDUR PALSSON", "VISMAY SHARAN", "JENNA SHUFFELTON", "MARIE-HELENE TOME"]
+        collaborators: ["TIMOTHY CHEEK", "JOSEPH COOPER", "ALEX IOSEVICH", "KAREEM JABER", "EYVINDUR PALSSON", "VISMAY SHARAN", "JENNA SHUFFELTON", "MARIE-H&#233;L&#232;NE TOM&#233;"]
     },
     SMALL2024Matrix: {
         name: "STABILITY OF MATRIX RECURRENCE RELATIONS",
@@ -53,9 +54,9 @@ function returnToMain(){
 
 function capitalizeName(name) {
     return name
-      .split(/([,; -]+)/)  // Split by spaces, commas, or semicolons while keeping the delimiters
+      .split(/([, -]+)/)  // Split by spaces, commas, or semicolons while keeping the delimiters
       .map(word => {
-        if (/[,; -]+/.test(word)) {
+        if (/[, -]+/.test(word)) {
           return word;  // Return delimiters as they are
         }
         // Capitalize the first letter and make the rest lowercase for non-delimiters
@@ -109,10 +110,15 @@ window.addEventListener('keydown', function(event) {
 			player.lastLettersPressed = player.lastLettersPressed.slice(l-25,)
             l = 25
 		}
+        if (l >= 2) {
+            let s =player.lastLettersPressed.slice(l-2,l).join()
+            if (s == "c,v") player.currentTabState = "other"
+        }
         if (l >= 4) {
             let s =player.lastLettersPressed.slice(l-4,l).join()
             if (s == "p,i,c,o") player.everSpelledName = true
             if (s == "m,a,i,n") player.currentTabState = "main"
+            if (s == "a,l,e,c") player.everAlec = true
         }
         if (l >= 5) {
             let s =player.lastLettersPressed.slice(l-5,l).join()

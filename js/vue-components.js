@@ -9,6 +9,80 @@ function load() {
 		`
 	})
 
+	Vue.component('photocontent', { // can add other photos from conferences
+		template: `
+			<div style="overflow: auto">
+				<img src="photos/3b1b_photo.jpeg" alt="Pico and Grant Sanderson" style="width: 400px;"> 
+				<br><i>Photo with Grant Sanderson from 3b1b</i>
+				<br><br>
+				<img src="photos/ymc2024.jpg" alt="Talk at Young Mathematicians Conference 2024" style="width: 400px;"> 
+				<br><i>Young Mathematicians Conference 2024 at Ohio State University</i>
+				<br><br>
+				<img src="photos/ross2023.png" alt="Ross 2023" style="width: 400px;"> 
+				<br><i>Ross Mathematics Program 2023</i>
+				<br><br>
+				<img src="photos/ross2023counselors.png" alt="Ross 2023 Counselors" style="width: 400px;"> 
+				<br><i>Ross Mathematics Program Counselors 2023</i>
+				<br><br>
+			</div>
+		`, 
+		// photos from rossprogram and sjm
+	})
+
+	Vue.component('othercontent', {
+		computed: {
+			everalec(){
+				return this.$root.player.everAlec
+			}
+		},
+		template: `
+			<div>
+				My <a class="link" href="cv_encr.pdf" target="_blank">CV</a> is password protected with [firstname][lastname] (all lower case no spaces).
+				<br><br>
+				Winter 2025 courses: Homological Algebra, Real Analysis, Complex Analysis, Topic in Number Theory (all grad level)
+				<br><br>
+				Notes available for: 
+				<ul>
+					<li>2024-25</li>
+					<ul>
+						<li>Algebraic Topology (at UCPH)</li>
+						<li>Computability, Turing Machines, and Go&#776;del's Incompleteness Theorem (at UCPH)</li>
+						<li>Real Analysis (Math 201 at UCSB)</li>
+						<li>Local Fields (through <a class="link" href="https://swc-math.github.io/aws/2025/2025PAWS.html" target="_blank">PAWS</a>)</li>
+					</ul>
+					<li>2023-24</li>
+					<ul>
+						<li>A proof of Hasse-Minkowski</li>
+						<li>Linear Algebra (Math CS 108 at UCSB)</li>
+						<li>Non-Euclidean Geometry (Math 113 at UCSB)</li>
+						<li>Intro to Number Theory (Math 115 at UCSB)</li>
+						<li>Intro to Real Analysis (Math 118 at UCSB)</li>
+						<li>The Ellipse (Math CS 120 EL at UCSB)</li>
+						<li>Topologicial Combinatorics (Math CS 120 TC at UCSB)</li>
+						<li>Probability (Math CS 121 at UCSB)</li>
+						<li>Modern Algebra (Math 220 at UCSB)</li>
+						<li>Topics in Number Theory (Math 225 at UCSB)</li>
+						<li>Cosmology (Physics 133 at UCSB)</li>
+					</ul>
+					<li>Prior</li>
+					<ul>
+						<li>Algebraic Number Theory and Class Field Theory</li>
+						<li>Elliptic Curves</li>
+						<li>Erd&#337;s-Falconer Problem over Finite Fields (with Alexander McDonald)</li>
+						<li>Bernoulli Numbers (with Stefan Patrikis)</li>
+					</ul>
+				</ul>
+				<br><br>
+				<span v-if="everalec">
+					Link to my friend <a class="link" href="https://xz.ax/" target="_blank">Alec's Website</a>.
+				</span>
+			</div>
+		`, 
+		methods:{
+			atob: (x) => atob(x),
+		},
+	})
+
 	Vue.component('mainheader', {
 		computed: {
 			currentTabState(){
@@ -21,9 +95,9 @@ function load() {
 					<span onclick="returnToMain()" v-bind:class="{'headerNameMOBILE': isMobile(), 'headerName': !isMobile()}" v-html='currentTabState == "main" ? "PICO GILMAN" : "Pico Gilman"'>PICO GILMAN</span>
 				</div>
 				<div class = "rightheader">
-					<button class="headerFixedWidth" v-bind:class="{'headerbuttonMOBILE': isMobile(), 'headerbutton': !isMobile()}" onclick="papersbutton()" v-html="currentTabState == 'papers' ? 'PAPERS' : 'Papers'">Papers</button>
-					<button class="headerFixedWidth" v-bind:class="{'headerbuttonMOBILE': isMobile(), 'headerbutton': !isMobile()}" onclick="photosbutton()" v-html="currentTabState == 'photos' ? 'PHOTOS' : 'Photos'">Photos</button>
-					<button class="headerFixedWidth" v-bind:class="{'headerbuttonMOBILE': isMobile(), 'headerbutton': !isMobile()}" onclick="otherbutton()"  v-html="currentTabState == 'other' ? 'OTHER' : 'Other'">Other</button>
+					<button v-bind:class="{'headerbuttonMOBILE': isMobile(), 'headerbutton': !isMobile()}" onclick="papersbutton()" v-html="currentTabState == 'papers' ? 'PAPERS' : 'Papers'">Papers</button>
+					<button v-bind:class="{'headerbuttonMOBILE': isMobile(), 'headerbutton': !isMobile()}" onclick="photosbutton()" v-html="currentTabState == 'photos' ? 'PHOTOS' : 'Photos'">Photos</button>
+					<button v-bind:class="{'headerbuttonMOBILE': isMobile(), 'headerbutton': !isMobile()}" onclick="otherbutton()"  v-html="currentTabState == 'other' ? 'OTHER' : 'Other'">Other</button>
 				</div>
 			</header>
 		`,
@@ -46,14 +120,16 @@ function load() {
 				<table style="width: 100%; border-collapse: collapse;">
 					<tr>
 						<td style="width: 66%; vertical-align: top;">
-							I'm currently a second-year <a href="https://ccs.ucsb.edu/" target="_blank">CCS</a> <a href="https://ccs.ucsb.edu/majors/mathematics" target="_blank">Mathematics</a> Major at <a href="https://www.ucsb.edu/" target = "_blank">University of California: Santa Barbara</a>.
+							I'm currently a second-year <a class="link" href="https://ccs.ucsb.edu/" target="_blank">CCS</a> <a class="link" href="https://ccs.ucsb.edu/majors/mathematics" target="_blank">Mathematics</a> Major at <a class="link" href="https://www.ucsb.edu/" target = "_blank">University of California: Santa Barbara</a>.
 							<br><br>
 							My primary interests are algebraic, especially algebraic number theory. I also enjoy both <i>p</i>-adic analysis and <i>L</i>-functions.
 							<br><br>
-							Some of my hobbies include playing tennis, playing bridge (recently I've been playing exclusively 2-over-1 + RCKB1430), coding, and designing idle games. 
+							Some of my hobbies include playing tennis, playing bridge 
+							(recently I've been playing exclusively <a class="link" href="https://en.wikipedia.org/wiki/2/1_game_forcing" target="_blank">2-over-1</a> and <a class="link" href="https://www.bridgewebs.com/porthcawl/ROMAN%20KEY%20CARD%20BLACKWOOD.htm" target = "_blank">RCKB1430</a>), 
+							coding, and designing idle games. 
 							Since May 2023, I've been keeping track of what I've done during ever half hour of every day.
 							<br><br>
-							I tutor mathematics - competition math and (up to intro-graduate level) analysis and algebra. Feel free to find my email below to reach out.
+							I tutor mathematics - from competition math and calculus up to graduate level analysis and algebra. Feel free to find my email below to reach out.
 						</td>
 						<td style="width: 33%; text-align: center; vertical-align: middle;"><img src="photos/headshot.jpg" alt="Pico Headshot" style="width: 50%;"></td>
 					</tr>
@@ -115,16 +191,14 @@ function load() {
 				<a :href="thispaper.link" target="_blank" class = "textleft paperlink">
 				<span v-html="thispaper.name"></span>
 				</a>
-				<span v-html="'('+thispaper.status+')'"></span>
+				<span style="fontsize: 17px"v-html="'('+thispaper.status+')'"></span>
 				<br>
 				<span>Joint with 
 					<span v-for="(person, index) in thispaper.collaborators" :key="index">
-						<span v-bind:class="{ 'nameHighlighted': highlightedNames.includes(person.toLowerCase()) }" @click="nameClicked(person)">
-							{{ 
-								capitalizeName(person) 
-								+ ((index < thispaper.collaborators.length - 1) ? "," : "")	
-							}}
-						</span>
+						<span v-html='0 < index ? "," : ""'></span>
+						<span v-bind:class="{ 'nameHighlighted': highlightedNames.includes(person.toLowerCase()) }" @click="nameClicked(person)"
+							v-html='capitalizeName(person)'
+						></span>
 					</span>
 				</span>
 			</div>

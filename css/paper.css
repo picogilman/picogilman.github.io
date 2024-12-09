@@ -12,19 +12,18 @@
 }
 
 .paperlink{ 
-	font-size: 15px;
-	color: #63b1de;
+	font-size: 17px;
+	color: #82c5ec;
 	cursor: pointer;
 	font-family: "Computer Modern", "Lucida Console", "Courier New", monospace;
 	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: #63b1de;
+	-webkit-text-stroke-color: #82c5ec;
 	text-decoration: none;  
     transition-duration: .2s;
 }
 
 .paperlink:hover {
-	text-shadow: 3px 0 10px #63b1de,
-              -3px 0 12px #63b1de;
+	text-shadow: 3px 0 10px #82c5ec, -3px 0 10px #82c5ec;
 }
 
 .nameHighlighted{

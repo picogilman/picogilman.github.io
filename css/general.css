@@ -5,7 +5,6 @@ body {
 	--color: #dfdfdf;
 	--points: #ffffff;
 	background: var(--background);
-	overflow: hidden;
 }
 
 * {
@@ -27,26 +26,32 @@ h1, h2, h3, b, input {
 	font-family: "Computer Modern", "Inconsolata", 
 }
 
+ul {
+	list-style-type: disc;
+	margin: 0;
+	padding-left: 20px;
+}
+
+ul ul {
+	list-style-type: circle;
+	margin: 0;
+	padding-left: 20px;
+}
+
 /* These are styles for different states of components. You can make layer-specific versions with .c.locked, for example */
 .locked {
 	cursor: not-allowed;
 }
 
-.link {
-	display: block;
-	font-size: 15px;
-	color: #41f5f5;
+.link{
+    color: #a5d8f6;
 	cursor: pointer;
-	font-family: "Computer Modern", "Lucida Console", "Courier New", monospace;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: #02f2f2;
-	text-decoration: none;
+	text-decoration: underline;  
+    transition-duration: .2s;
 }
 
 .link:hover {
-	transform: scale(1.2, 1.2);
-	text-shadow: 5px 0 10px #02f2f2,
-              -3px 0 12px #02f2f2;
+    text-shadow: 3px 0 10px #a5d8f6, -3px 0 10px #a5d8f6;
 }
 
 html, body {
