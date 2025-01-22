@@ -33,7 +33,13 @@ var PAPERS = {
         link: "https://arxiv.org/pdf/2408.12660",
         status: "submitted",
         collaborators: ["GLENN BRUDA", "BRUCE FANG", "RAUL MARQUEZ", "STEVEN J. MILLER", "BENI PRAPASHTICA", "DAEYOUNG SON", "SAAD WAHEED", "JANINE WANG"]
-    }
+    },
+    SMALL2024Leslie: {
+        name: "LESLIE POPULATION MODELS IN PREDATOR-PREY AND COMPETITIVE POPULATIONS: THEORY AND APPLICATIONS BY MACHINE LEARNING",
+        link: "https://arxiv.org/pdf/2412.19831",
+        status: "submitted",
+        collaborators: ["STEVEN J. MILLER", "DAEYOUNG SON", "SAAD WAHEED", "JANINE WANG"]
+    },
 }
 
 function papersbutton(){
