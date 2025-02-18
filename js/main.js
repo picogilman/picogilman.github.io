@@ -13,31 +13,36 @@ var PAPERS = {
     SMALL2024LowLying: {
         name: "ON THE DENSITY OF LOW LYING ZEROS OF A LARGE FAMILY OF AUTOMORPHIC <i>L</i>-FUNCTIONS",
         link: "https://arxiv.org/pdf/2408.09050",
-        status: "submitted",
+        status: "submitted", 
+        // PUT THE DATE + CITATION COUNT
         collaborators: ["TIMOTHY CHEEK", "KAREEM JABER", "STEVEN J. MILLER", "MARIE-H&#233;L&#232;NE TOM&#233;"]
     },
     SMALL2024Bias: {
         name: "NUMERICAL INVESTIGATION OF LOWER ORDER BIASES IN MOMENT EXPANSIONS OF ONE PARAMETER FAMILIES OF ELLIPTIC CURVES",
         link: "https://arxiv.org/pdf/2409.18224",
         status: "on arXiv",
+        // PUT THE DATE + CITATION COUNT
         collaborators: ["TIMOTHY CHEEK", "KAREEM JABER", "STEVEN J. MILLER", "VISMAY SHARAN", "MARIE-H&#233;L&#232;NE TOM&#233;"]
     },
     SMALL2024Erdos: {
         name: "CONGRUENCE CLASSES OF SIMPLEX STRUCTURES IN FINITE FIELD VECTOR SPACES",
         link: "https://arxiv.org/pdf/2408.07912",
         status: "submitted",
+        // PUT THE DATE + CITATION COUNT
         collaborators: ["TIMOTHY CHEEK", "JOSEPH COOPER", "ALEX IOSEVICH", "KAREEM JABER", "EYVINDUR PALSSON", "VISMAY SHARAN", "JENNA SHUFFELTON", "MARIE-H&#233;L&#232;NE TOM&#233;"]
     },
     SMALL2024Matrix: {
         name: "STABILITY OF MATRIX RECURRENCE RELATIONS",
         link: "https://arxiv.org/pdf/2408.12660",
         status: "submitted",
+        // PUT THE DATE + CITATION COUNT
         collaborators: ["GLENN BRUDA", "BRUCE FANG", "RAUL MARQUEZ", "STEVEN J. MILLER", "BENI PRAPASHTICA", "DAEYOUNG SON", "SAAD WAHEED", "JANINE WANG"]
     },
     SMALL2024Leslie: {
         name: "LESLIE POPULATION MODELS IN PREDATOR-PREY AND COMPETITIVE POPULATIONS: THEORY AND APPLICATIONS BY MACHINE LEARNING",
         link: "https://arxiv.org/pdf/2412.19831",
         status: "submitted",
+        // PUT THE DATE + CITATION COUNT
         collaborators: ["STEVEN J. MILLER", "DAEYOUNG SON", "SAAD WAHEED", "JANINE WANG"]
     },
 }

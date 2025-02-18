@@ -129,7 +129,7 @@ function load() {
 							coding, and designing idle games. 
 							Since May 2023, I've been keeping track of what I've done during ever half hour of every day.
 							<br><br>
-							I tutor mathematics - from competition math and calculus up to graduate level analysis and algebra. Feel free to find my email below to reach out.
+							I tutor mathematics - from competition math and calculus up to graduate level analysis and algebra. I was 6th place in the <a class = "link" href="https://maa.org/wp-content/uploads/2025/02/2024-Putnam-Competition-Announcement-of-Winners-1.pdf">William Lowell Putnam Mathematical Competition</a> in 2024. Feel free to find my email below to reach out.
 						</td>
 						<td style="width: 33%; text-align: center; vertical-align: middle;"><img src="photos/headshot.jpg" alt="Pico Headshot" style="width: 50%;"></td>
 					</tr>
