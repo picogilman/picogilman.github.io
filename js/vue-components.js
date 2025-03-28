@@ -39,16 +39,20 @@ function load() {
 			<div>
 				My <a class="link" href="cv_encr.pdf" target="_blank">CV</a> is password protected with [firstname][lastname] (all lower case no spaces).
 				<br><br>
-				Winter 2025 courses: Homological Algebra, Real Analysis, Complex Analysis, Topic in Number Theory (all grad level)
+				Spring 2025 math courses: Homological Algebra (236B), Real Analysis (201C), Complex Analysis (202C). All graduate level.
 				<br><br>
-				Notes available for: 
+				Notes available upon request for: 
 				<ul>
 					<li>2024-25</li>
 					<ul>
 						<li>Algebraic Topology (at UCPH)</li>
 						<li>Computability, Turing Machines, and Go&#776;del's Incompleteness Theorem (at UCPH)</li>
-						<li>Real Analysis (Math 201 at UCSB)</li>
+						<li>Real Analysis (Math 201AB at UCSB)</li>
+						<li>Complex Analysis (Math 202B at UCSB)</li>
+						<li>Topics in Number Theory (Math 225B at UCSB)</li>
+						<li>Homological Algebra (Math 236A at UCSB)</li>
 						<li>Local Fields (through <a class="link" href="https://swc-math.github.io/aws/2025/2025PAWS.html" target="_blank">PAWS</a>)</li>
+						<li>Stellar Structure and Evolution (Physics 132 at UCSB)</li>
 					</ul>
 					<li>2023-24</li>
 					<ul>
@@ -56,12 +60,12 @@ function load() {
 						<li>Linear Algebra (Math CS 108 at UCSB)</li>
 						<li>Non-Euclidean Geometry (Math 113 at UCSB)</li>
 						<li>Intro to Number Theory (Math 115 at UCSB)</li>
-						<li>Intro to Real Analysis (Math 118 at UCSB)</li>
+						<li>Intro to Real Analysis (Math 118ABC at UCSB)</li>
 						<li>The Ellipse (Math CS 120 EL at UCSB)</li>
 						<li>Topologicial Combinatorics (Math CS 120 TC at UCSB)</li>
 						<li>Probability (Math CS 121 at UCSB)</li>
-						<li>Modern Algebra (Math 220 at UCSB)</li>
-						<li>Topics in Number Theory (Math 225 at UCSB)</li>
+						<li>Modern Algebra (Math 220ABC at UCSB)</li>
+						<li>Topics in Number Theory (Math 225AB at UCSB)</li>
 						<li>Cosmology (Physics 133 at UCSB)</li>
 					</ul>
 					<li>Prior</li>
@@ -72,10 +76,11 @@ function load() {
 						<li>Bernoulli Numbers (with Stefan Patrikis)</li>
 					</ul>
 				</ul>
-				<br><br>
+				<br>
 				<span v-if="everalec">
-					Link to my friend <a class="link" href="https://xz.ax/" target="_blank">Alec's Website</a>.
+					Link to my friend <a class="link" href="https://xz.ax/" target="_blank">Alec's Website</a>.<br>
 				</span>
+				<br>
 			</div>
 		`, 
 		methods:{
@@ -120,16 +125,18 @@ function load() {
 				<table style="width: 100%; border-collapse: collapse;">
 					<tr>
 						<td style="width: 66%; vertical-align: top;">
-							I'm currently a second-year <a class="link" href="https://ccs.ucsb.edu/" target="_blank">CCS</a> <a class="link" href="https://ccs.ucsb.edu/majors/mathematics" target="_blank">Mathematics</a> Major at <a class="link" href="https://www.ucsb.edu/" target = "_blank">University of California: Santa Barbara</a>.
+							I'm currently a second-year <a class="link" href="https://ccs.ucsb.edu/" target="_blank">CCS</a> <a class="link" href="https://ccs.ucsb.edu/majors/mathematics" target="_blank">Mathematics</a> Major at <a class="link" href="https://www.ucsb.edu/" target = "_blank">University of California: Santa Barbara</a>. 
+							I was <a class = "link" target="_blank" href="https://kskedlaya.org/putnam-archive/AnnouncementOfWinners2024.pdf">6th place</a> individually and 5th place team in the William Lowell Putnam Mathematical Competition in 2024.
+							I am a 2025 <a class = "link" target="_blank" href="https://goldwaterscholarship.gov/">Barry Goldwater</a> scholarship winner.
 							<br><br>
 							My primary interests are algebraic, especially algebraic number theory. I also enjoy both <i>p</i>-adic analysis and <i>L</i>-functions.
 							<br><br>
-							Some of my hobbies include playing tennis, playing bridge 
+							Some of my hobbies include tennis, bridge 
 							(recently I've been playing exclusively <a class="link" href="https://en.wikipedia.org/wiki/2/1_game_forcing" target="_blank">2-over-1</a> and <a class="link" href="https://www.bridgewebs.com/porthcawl/ROMAN%20KEY%20CARD%20BLACKWOOD.htm" target = "_blank">RCKB1430</a>), 
 							coding, and designing idle games. 
 							Since May 2023, I've been keeping track of what I've done during ever half hour of every day.
 							<br><br>
-							I tutor mathematics - from competition math and calculus up to graduate level analysis and algebra. I was 6th place in the <a class = "link" href="https://maa.org/wp-content/uploads/2025/02/2024-Putnam-Competition-Announcement-of-Winners-1.pdf">William Lowell Putnam Mathematical Competition</a> in 2024. Feel free to find my email below to reach out.
+							I tutor mathematics - from competition math and calculus up to graduate level analysis and algebra.  Feel free to find my email below to reach out.
 						</td>
 						<td style="width: 33%; text-align: center; vertical-align: middle;"><img src="photos/headshot.jpg" alt="Pico Headshot" style="width: 50%;"></td>
 					</tr>
