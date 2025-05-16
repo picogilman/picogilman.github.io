@@ -37,7 +37,7 @@ function load() {
 		},
 		template: `
 			<div>
-				My <a class="link" href="cv_encr.pdf" target="_blank">CV</a> is password protected with [firstname][lastname] (all lower case no spaces).
+				My <a class="link" href="pdfs/cv_encr.pdf" target="_blank">CV</a> is password protected with [firstname][lastname] (all lower case no spaces).
 				<br><br>
 				Spring 2025 math courses: Homological Algebra (236B), Real Analysis (201C), Complex Analysis (202C). All graduate level.
 				<br><br>
@@ -126,7 +126,7 @@ function load() {
 					<tr>
 						<td style="width: 66%; vertical-align: top;">
 							I'm currently a second-year <a class="link" href="https://ccs.ucsb.edu/" target="_blank">CCS</a> <a class="link" href="https://ccs.ucsb.edu/majors/mathematics" target="_blank">Mathematics</a> Major at <a class="link" href="https://www.ucsb.edu/" target = "_blank">University of California: Santa Barbara</a>. 
-							I was <a class = "link" target="_blank" href="https://kskedlaya.org/putnam-archive/AnnouncementOfWinners2024.pdf">6th place</a> individually and 5th place team in the William Lowell Putnam Mathematical Competition in 2024.
+							I was <a class = "link" target="_blank" href="https://kskedlaya.org/putnam-archive/AnnouncementOfWinners2024.pdf">6th place</a> individually and part of the 5th place team in the William Lowell Putnam Mathematical Competition in 2024.
 							I am a 2025 <a class = "link" target="_blank" href="https://goldwaterscholarship.gov/">Barry Goldwater</a> scholarship winner.
 							<br><br>
 							My primary interests are algebraic, especially algebraic number theory. I also enjoy both <i>p</i>-adic analysis and <i>L</i>-functions.
