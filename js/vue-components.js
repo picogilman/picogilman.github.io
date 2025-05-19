@@ -15,6 +15,9 @@ function load() {
 				<img src="photos/3b1b_photo.jpeg" alt="Pico and Grant Sanderson" style="width: 400px;"> 
 				<br><i>Photo with Grant Sanderson from 3b1b</i>
 				<br><br>
+				<img src="photos/AFW37.jpeg" alt="Talk at 37th AFW" style="width: 400px;"> 
+				<br><i>37th Automorphic Forms Workshop at University of North Texas</i>
+				<br><br>
 				<img src="photos/ymc2024.jpg" alt="Talk at Young Mathematicians Conference 2024" style="width: 400px;"> 
 				<br><i>Young Mathematicians Conference 2024 at Ohio State University</i>
 				<br><br>
