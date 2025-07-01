@@ -42,7 +42,7 @@ function load() {
 			<div>
 				My <a class="link" href="pdfs/cv_encr.pdf" target="_blank">CV</a> is password protected with [firstname][lastname] (all lower case no spaces).
 				<br><br>
-				Spring 2025 math courses: Homological Algebra (236B), Real Analysis (201C), Complex Analysis (202C). All graduate level.
+				Expected Fall 2025 math courses: Seminar in Algebra (18.704), Algebraic Geometry I (18.725), Elliptic Curves (18.783), Topics in Number Theory (18.787). 
 				<br><br>
 				Notes available upon request for: 
 				<ul>
@@ -50,10 +50,10 @@ function load() {
 					<ul>
 						<li>Algebraic Topology (at UCPH)</li>
 						<li>Computability, Turing Machines, and Go&#776;del's Incompleteness Theorem (at UCPH)</li>
-						<li>Real Analysis (Math 201AB at UCSB)</li>
-						<li>Complex Analysis (Math 202B at UCSB)</li>
+						<li>Real Analysis (Math 201ABC at UCSB)</li>
+						<li>Complex Analysis (Math 202BC at UCSB)</li>
 						<li>Topics in Number Theory (Math 225B at UCSB)</li>
-						<li>Homological Algebra (Math 236A at UCSB)</li>
+						<li>Homological Algebra (Math 236AB at UCSB)</li>
 						<li>Local Fields (through <a class="link" href="https://swc-math.github.io/aws/2025/2025PAWS.html" target="_blank">PAWS</a>)</li>
 						<li>Stellar Structure and Evolution (Physics 132 at UCSB)</li>
 					</ul>
@@ -128,9 +128,11 @@ function load() {
 				<table style="width: 100%; border-collapse: collapse;">
 					<tr>
 						<td style="width: 66%; vertical-align: top;">
-							I'm currently a second-year <a class="link" href="https://ccs.ucsb.edu/" target="_blank">CCS</a> <a class="link" href="https://ccs.ucsb.edu/majors/mathematics" target="_blank">Mathematics</a> Major at <a class="link" href="https://www.ucsb.edu/" target = "_blank">University of California: Santa Barbara</a>. 
+							I am currently a <a class="link" href="https://math.mit.edu/" target="_blank">Course 18</a> Major at <a class="link" href="https://mit.edu/" target="_blank">MIT</a>.
+							I am a 2025 <a class = "link" target="_blank" href="https://goldwaterscholarship.gov/">Barry Goldwater</a> scholar.
+							<br><br>
+							Previously, I attended <a class="link" href="https://www.ucsb.edu/" target = "_blank">University of California: Santa Barbara</a> for two years as part of the <a class="link" href="https://ccs.ucsb.edu/" target="_blank">CCS</a> <a class="link" href="https://ccs.ucsb.edu/majors/mathematics" target="_blank">Mathematics</a> program. 
 							I was <a class = "link" target="_blank" href="https://kskedlaya.org/putnam-archive/AnnouncementOfWinners2024.pdf">6th place</a> individually and part of the 5th place team in the William Lowell Putnam Mathematical Competition in 2024.
-							I am a 2025 <a class = "link" target="_blank" href="https://goldwaterscholarship.gov/">Barry Goldwater</a> scholarship winner.
 							<br><br>
 							My primary interests are algebraic, especially algebraic number theory. I also enjoy both <i>p</i>-adic analysis and <i>L</i>-functions.
 							<br><br>
@@ -154,8 +156,8 @@ function load() {
 					</button>
 					<button
 						class = "emailbutton" 
-						v-html = "everSpelledSurname ? (atob('cGljb2dpbG1hbkB1Y3NiLmVkdQ==') + ' (click to copy)') : 'Click or type out my last name to reveal professional email'"
-						onclick = "player.everSpelledSurname ? navigator.clipboard.writeText(atob('cGljb2dpbG1hbkB1Y3NiLmVkdQ==')) : mobileRevealProfessionalEmail()"
+						v-html = "everSpelledSurname ? (atob('cGljb0BtaXQuZWR1Cg==') + ' (click to copy)') : 'Click or type out my last name to reveal institutional email'"
+						onclick = "player.everSpelledSurname ? navigator.clipboard.writeText(atob('cGljb0BtaXQuZWR1Cg==')) : mobileRevealProfessionalEmail()"
 						>
 					</button>
 				</span>
