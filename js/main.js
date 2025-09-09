@@ -13,14 +13,21 @@ var PAPERS = {
     SMALL2024LowLying: {
         name: "ON THE DENSITY OF LOW LYING ZEROS OF A LARGE FAMILY OF AUTOMORPHIC <i>L</i>-FUNCTIONS",
         link: "https://arxiv.org/pdf/2408.09050",
-        status: "submitted", 
+        status: "submitted", // Research in Number Theory
         // PUT THE DATE + CITATION COUNT
         collaborators: ["TIMOTHY CHEEK", "KAREEM JABER", "STEVEN J. MILLER", "MARIE-H&#233;L&#232;NE TOM&#233;"]
     },
     SMALL2024Bias: {
         name: "NUMERICAL INVESTIGATION OF LOWER ORDER BIASES IN MOMENT EXPANSIONS OF ONE PARAMETER FAMILIES OF ELLIPTIC CURVES",
-        link: "https://arxiv.org/pdf/2409.18224",
-        status: "on arXiv",
+        link: "https://www.sciencedirect.com/science/article/abs/pii/S0022314X25002033", // "https://arxiv.org/pdf/2409.18224", 
+        status: "Journal of Number Theory", 
+        // PUT THE DATE + CITATION COUNT
+        collaborators: ["TIMOTHY CHEEK", "KAREEM JABER", "STEVEN J. MILLER", "VISMAY SHARAN", "MARIE-H&#233;L&#232;NE TOM&#233;"]
+    },
+    SMALL2024BiasSurvey: {
+        name: "A SURVEY OF LOWER ORDER BIASES IN MOMENT EXPANSIONS OF ONE PARAMETER FAMILIES OF ELLIPTIC CURVES",
+        link: "https://web.williams.edu/Mathematics/sjmiller/public_html/math/papers/ECBias_Database_Survey_StonyBrook_SMALL2024_v11.pdf",
+        status: "Conference Proceedings of the Murmurations Workshop at Stony Brook 2024", 
         // PUT THE DATE + CITATION COUNT
         collaborators: ["TIMOTHY CHEEK", "KAREEM JABER", "STEVEN J. MILLER", "VISMAY SHARAN", "MARIE-H&#233;L&#232;NE TOM&#233;"]
     },
@@ -32,7 +39,7 @@ var PAPERS = {
         collaborators: ["TIMOTHY CHEEK", "JOSEPH COOPER", "ALEX IOSEVICH", "KAREEM JABER", "EYVINDUR PALSSON", "VISMAY SHARAN", "JENNA SHUFFELTON", "MARIE-H&#233;L&#232;NE TOM&#233;"]
     },
     SMALL2024Matrix: {
-        name: "STABILITY OF MATRIX RECURRENCE RELATIONS",
+        name: "A CLOSED FORMULA FOR LINEAR RECURRENCES WITH CONSTANT COEFFICIENTS",
         link: "https://arxiv.org/pdf/2408.12660",
         status: "submitted",
         // PUT THE DATE + CITATION COUNT
@@ -64,16 +71,16 @@ function returnToMain(){
 }
 
 function capitalizeName(name) {
-    return name
-      .split(/([, -]+)/)  // Split by spaces, commas, or semicolons while keeping the delimiters
-      .map(word => {
-        if (/[, -]+/.test(word)) {
-          return word;  // Return delimiters as they are
-        }
-        // Capitalize the first letter and make the rest lowercase for non-delimiters
-        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-      })
-      .join('');  // Join everything back into a single string
+    return  name
+            .split(/([, -]+)/)  // Split by spaces, commas, or semicolons while keeping the delimiters
+            .map(word => {
+                if (/[, -]+/.test(word)) {
+                return word;  // Return delimiters as they are
+                }
+                // Capitalize the first letter and make the rest lowercase for non-delimiters
+                return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+            })
+            .join('');  // Join everything back into a single string
 }
 
 function nameClicked(name){ 
@@ -86,9 +93,16 @@ function nameClicked(name){
     }
 }
 
-function isMobile(){
+/*
+function isMobileOLD(){
     return /Mobi|Android/i.test(navigator.userAgent); 
     // found online at https://www.restack.io/p/vue-js-detect-mobile-answer on 12/8/24
+}
+*/
+
+function isMobile(){
+    return window.innerWidth * window.innerHeight <= 500000 // 500,000 
+    // found online at https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser on 7/2/25
 }
 
 function mobileRevealPersonalEmail(){
