@@ -124,20 +124,27 @@ function load() {
 
 	Vue.component('main_text', {
 		template: `	<p>
-						I am currently a <a class="link" href="https://math.mit.edu/" target="_blank">Course 18</a> Major at <a class="link" href="https://mit.edu/" target="_blank">MIT</a>.
+						I am currently a <a class="link" href="https://math.mit.edu/" target="_blank">Course 18</a> 
+						Major at <a class="link" href="https://mit.edu/" target="_blank">MIT</a>.
 						I am a 2025 <a class = "link" target="_blank" href="https://goldwaterscholarship.gov/">Barry Goldwater</a> scholar.
 						<br><br>
-						Previously, I attended <a class="link" href="https://www.ucsb.edu/" target = "_blank">University of California: Santa Barbara</a> for two years as part of the <a class="link" href="https://ccs.ucsb.edu/" target="_blank">CCS</a> <a class="link" href="https://ccs.ucsb.edu/majors/mathematics" target="_blank">Mathematics</a> program. 
-						I was <a class = "link" target="_blank" href="https://kskedlaya.org/putnam-archive/AnnouncementOfWinners2024.pdf">6th place</a> individually and part of the 5th place team in the William Lowell Putnam Mathematical Competition in 2024.
+						Previously, I attended <a class="link" href="https://www.ucsb.edu/" target = "_blank">University of California: Santa Barbara</a> 
+						for two years as part of the <a class="link" href="https://ccs.ucsb.edu/" target="_blank">CCS</a> 
+						<a class="link" href="https://ccs.ucsb.edu/majors/mathematics" target="_blank">Mathematics</a> program. 
+						I was <a class = "link" target="_blank" href="https://kskedlaya.org/putnam-archive/AnnouncementOfWinners2024.pdf">6th place</a> 
+						individually and part of the 5th place team in the William Lowell Putnam Mathematical Competition in 2024.
 						<br><br>
-						My primary interests are algebraic, especially algebraic number theory. I also enjoy both <i>p</i>-adic analysis and <i>L</i>-functions.
+						My primary interests are algebraic, especially algebraic number theory. 
+						I also enjoy both <i>p</i>-adic analysis and <i>L</i>-functions.
 						<br><br>
 						Some of my hobbies include tennis, bridge 
 						(recently I've been playing exclusively <a class="link" href="https://en.wikipedia.org/wiki/2/1_game_forcing" target="_blank">2-over-1</a> and <a class="link" href="https://www.bridgewebs.com/porthcawl/ROMAN%20KEY%20CARD%20BLACKWOOD.htm" target = "_blank">RCKB1430</a>), 
 						coding, and designing idle games. 
 						Since May 2023, I've been keeping track of what I've done during ever half hour of every day.
 						<br><br>
-						I tutor mathematics - from competition math and calculus up to graduate level analysis and algebra.  Feel free to find my email below to reach out.
+						I tutor mathematics. This includes competition math tutoring, including Putnam or USA(J)MO, 
+						and standard mathematics up to graduate level analysis and algebra.  
+						Feel free to find my email below to reach out.
 					</p>`
 	});
 
