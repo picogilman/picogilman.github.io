@@ -33,8 +33,8 @@ var PAPERS = {
     },
     SMALL2024Erdos: {
         name: "CONGRUENCE CLASSES OF SIMPLEX STRUCTURES IN FINITE FIELD VECTOR SPACES",
-        link: "https://arxiv.org/pdf/2408.07912",
-        status: "submitted",
+        link: "https://bulletin.math.uoc.gr/vol/69/69-41-88.pdf", //"https://arxiv.org/pdf/2408.07912",
+        status: "Bulletin of the Hellenic Mathematical Society",
         // PUT THE DATE + CITATION COUNT
         collaborators: ["TIMOTHY CHEEK", "JOSEPH COOPER", "ALEX IOSEVICH", "KAREEM JABER", "EYVINDUR PALSSON", "VISMAY SHARAN", "JENNA SHUFFELTON", "MARIE-H&#233;L&#232;NE TOM&#233;"]
     },
