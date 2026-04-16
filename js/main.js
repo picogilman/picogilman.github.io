@@ -52,6 +52,18 @@ var PAPERS = {
         // PUT THE DATE + CITATION COUNT
         collaborators: ["STEVEN J. MILLER", "DAEYOUNG SON", "SAAD WAHEED", "JANINE WANG"]
     },
+    MIT18821Project1: {
+        name: "SUB-GAUSSIAN CONCENTRATION FROM RANDOM YOUNG DIAGRAMS",
+        link: "pdfs/subgaussian_partitions.pdf",
+        status: "not published",
+        collaborators: ["MARK SAENGRUNGKONGKA"]
+    },
+    MIT18704Project: {
+        name: "FINITE SUBGROUPS OF GENERAL LINEAR GROUPS",
+        link: "pdfs/18704_expos.pdf",
+        status: "not published",
+        collaborators: [],
+    },
 }
 
 function papersbutton(){

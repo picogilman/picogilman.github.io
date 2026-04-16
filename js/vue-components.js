@@ -46,7 +46,7 @@ function load() {
 				<ul>
 					<li> Advanced Complexity Theory (18.405)</li>
 					<li> Non-commutative algebra (18.706)</li>
-					<li> Topics in Algebra (18.708)</li>
+					<li> Topics in Algebra (18.708; unofficial)</li>
 					<li> Algebraic Geometry II (18.726)</li>
 					<li> Project Lab in Mathematics (18.821)</li>
 				</ul>
@@ -134,14 +134,15 @@ function load() {
 	Vue.component('main_text', {
 		template: `	<p>
 						I am currently a <a class="link" href="https://math.mit.edu/" target="_blank">Course 18</a> 
-						Major at <a class="link" href="https://mit.edu/" target="_blank">MIT</a>.
+						(math major) at <a class="link" href="https://mit.edu/" target="_blank">MIT</a>.
 						I am a 2025 <a class = "link" target="_blank" href="https://goldwaterscholarship.gov/">Barry Goldwater</a> scholar.
 						<br><br>
 						Previously, I attended <a class="link" href="https://www.ucsb.edu/" target = "_blank">University of California: Santa Barbara</a> 
 						for two years as part of the <a class="link" href="https://ccs.ucsb.edu/" target="_blank">CCS</a> 
 						<a class="link" href="https://ccs.ucsb.edu/majors/mathematics" target="_blank">Mathematics</a> program. 
 						I was <a class = "link" target="_blank" href="https://kskedlaya.org/putnam-archive/AnnouncementOfWinners2024.pdf">6th place</a> 
-						individually and part of the 5th place team in the William Lowell Putnam Mathematical Competition in 2024.
+						individually and part of the 5th place team in the William Lowell Putnam Mathematical Competition in 2024, and
+						I was also <a class = "link" target="_blank" href="https://kskedlaya.org/putnam-archive/AnnouncementOfWinners2025.pdf">19th place</a> in 2025. 
 						<br><br>
 						My primary interests are algebraic, especially algebraic number theory. 
 						I also enjoy both <i>p</i>-adic analysis and <i>L</i>-functions.
@@ -152,7 +153,12 @@ function load() {
 						Since May 2023, I've been keeping track of what I've done during ever half hour of every day.
 						<br><br>
 						I tutor mathematics. This includes competition math tutoring, including Putnam or USA(J)MO, 
-						and standard mathematics up to graduate level analysis and algebra.  
+						and standard mathematics material up to graduate level analysis and algebra. 
+						Subjects that I have previously tutored include
+
+						high school geometry, high school algebra, trigonometry/precalculus, calculus, 
+						linear algebra, abstract algebra, real analysis, number theory, combinatorics, and more. 
+
 						Feel free to find my email below to reach out.
 					</p>`
 	});
@@ -242,13 +248,17 @@ function load() {
 				</a>
 				<span style="fontsize: 17px"v-html="'('+thispaper.status+')'"></span>
 				<br>
-				<span>Joint with 
+				<span v-if="thispaper.collaborators.length > 0">
+					Joint with 
 					<span v-for="(person, index) in thispaper.collaborators" :key="index">
 						<span v-html='0 < index ? "," : ""'></span>
 						<span v-bind:class="{ 'nameHighlighted': highlightedNames.includes(person.toLowerCase()) }" @click="nameClicked(person)"
 							v-html='capitalizeName(person)'
 						></span>
 					</span>
+				</span>
+				<span v-else>
+					Solo work
 				</span>
 			</div>
 		`,
