@@ -42,23 +42,24 @@ function load() {
 			<div>
 				My <a class="link" href="pdfs/cv_encr.pdf" target="_blank">CV</a> is password protected with [firstname][lastname] (all lower case no spaces).
 				<br><br>
-				Spring 2026 math courses: 
+				Fall 2026 math courses (anticipated): 
 				<ul>
-					<li> Advanced Complexity Theory (18.405)</li>
-					<li> Non-commutative algebra (18.706)</li>
-					<li> Topics in Algebra (18.708; unofficial)</li>
-					<li> Algebraic Geometry II (18.726)</li>
-					<li> Project Lab in Mathematics (18.821)</li>
+					<li>Combinatorial Theory (18.217)</li>
+					<li>Quantum Computation (18.435)</li>
+					<li>Lie Groups and Lie Algebras I (18.745)</li>
+					<li>PAWS: Algebraic Geometry via Computation</li>
 				</ul>
 				<br>
 				Notes available upon request: 
 				<ul>
 					<li>2025-26</li>
 					<ul>
-						<li>Classification of Cardinalities Finite Subgroups of General Linear Groups over the Rationals</li>
+						<li>Advanced Complexity Theory (18.405/6.541 at MIT)</li>
 						<li>Foundations of Cryptography (18.425/6.5620/6.875 at MIT)</li>
 						<li>Seminar in Algebra (18.704 at MIT)</li>
-						<li>Algebraic Geometry I (18.725 at MIT)</li>
+						<li>Non-commutative algebra (18.706 at MIT)</li>
+						<li>Topics in Algebra (18.708 at MIT; unofficial)</li>
+						<li>Algebraic Geometry I & II (18.725 & 18.726 at MIT)</li>
 						<li>Elliptic Curves (18.783 at MIT)</li>
 						<li>Topics in Number Theory (18.787 at MIT; unofficial)</li>
 						<li>Analysis and implementation of algorithms in number theory (through <a class="link" href="https://swc-math.github.io/aws/2025/2025PAWS.html" target="_blank">PAWS</a>)</li>
@@ -152,7 +153,7 @@ function load() {
 						coding, and designing idle games. 
 						Since May 2023, I've been keeping track of what I've done during ever half hour of every day.
 						<br><br>
-						I tutor mathematics. This includes competition math tutoring, including Putnam or USA(J)MO, 
+						I tutor mathematics. This includes competition math tutoring, including Putnam, USA(J)MO, AIME/AMC, 
 						and standard mathematics material up to graduate level analysis and algebra. 
 						Subjects that I have previously tutored include
 

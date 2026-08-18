@@ -58,11 +58,29 @@ var PAPERS = {
         status: "not published",
         collaborators: ["MARK SAENGRUNGKONGKA"]
     },
+    MIT18821Project2: {
+        name: "VARIANTS OF STANLEY SEQUENCES",
+        link: "pdfs/variants_stanley.pdf",
+        status: "not published",
+        collaborators: ["MARK SAENGRUNGKONGKA"]
+    },
+    MIT18405Project: {
+        name: "ON RELATIVIZATIONS OF BPP",
+        link: "pdfs/18405_expos.pdf",
+        status: "not published",
+        collaborators: [],
+    },
     MIT18704Project: {
         name: "FINITE SUBGROUPS OF GENERAL LINEAR GROUPS",
         link: "pdfs/18704_expos.pdf",
         status: "not published",
         collaborators: [],
+    },
+    UCSB225Project: {
+        name: "A PROOF OF HASSE-MINKOWSKI",
+        link: "pdfs/hasse_minkowski.pdf",
+        status: "not published",
+        collaborators: ["GENEVIEVE YAO"],
     },
 }
 
